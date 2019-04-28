@@ -1,59 +1,65 @@
-// Pull in required dependencies
-var path = require('path');
+// LOAD DATA
+var friendProfile = require("../data/friends");
 
-// Import the list of friend entries
-var friends = require('../data/friends.js');
+// ROUTING
+module.exports = function (app) {
+  
+  // API GET Requests
+  app.get("/api/friends", function (req, res) {
+    res.json(friendProfile);
+  });
 
-// Export API routes
-module.exports = function(app) {
-	// console.log('___ENTER apiRoutes.js___');
+  // API POST Requests
+  app.post("/api/friends", function (req, res) {
+    console.log(req.body);
 
-	// Total list of friend entries
-	app.get('/api/friends', function(req, res) {
-		res.json(friends);
-	});
+    // Object to hold the "best match"
+    var bestMatch = {
+      name: '',
+      photo: '',
+      friendDifference: 1000
+    };
 
-	// Add new friend entry
-	app.post('/api/friends', function(req, res) {
-		// Capture the user input object
-		var userInput = req.body;
-		// console.log('userInput = ' + JSON.stringify(userInput));
+    // Take the result of the user's survey POST and parse it
+    var userData = req.body;
+    var userScores = userData.scores;
 
-		var userResponses = userInput.scores;
-		// console.log('userResponses = ' + userResponses);
+    // [1]
+    for (var i = 0; i < friendProfile.length; i++) {
+      
+      // [2]
+      var totalDifference = 0;
+      console.log(friendProfile[i].name);
 
-		// Compute best friend match
-		var matchName = '';
-		var matchImage = '';
-		var totalDifference = 10000; // Make the initial value big for comparison
+      // [3]
+      for (var j = 0; j < friendProfile[i].scores[j]; j++) {
+        
+        totalDifference = 0;
+        
+        // [4]
+        totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friendProfile[i].scores[j]));
 
-		// Examine all existing friends in the list
-		for (var i = 0; i < friends.length; i++) {
-			// console.log('friend = ' + JSON.stringify(friends[i]));
 
-			// Compute differenes for each question
-			var diff = 0;
-			for (var j = 0; j < userResponses.length; j++) {
-				diff += Math.abs(friends[i].scores[j] - userResponses[j]);
-			}
-			// console.log('diff = ' + diff);
+        // [5]
+        if (totalDifference <= bestMatch.friendDifference) {
 
-			// If lowest difference, record the friend match
-			if (diff < totalDifference) {
-				// console.log('Closest match found = ' + diff);
-				// console.log('Friend name = ' + friends[i].name);
-				// console.log('Friend image = ' + friends[i].photo);
+          // [6]
+          bestMatch.name = friendProfile[i].name;
+          bestMatch.photo = friendProfile[i].photo;
+          bestMatch.friendDifference = totalDifference;
 
-				totalDifference = diff;
-				matchName = friends[i].name;
-				matchImage = friends[i].photo;
-			}
-		}
+        }
+      }
+    }
 
-		// Add new user
-		friends.push(userInput);
+    // [7]
+    friendProfile.push(userData);
 
-		// Send appropriate response
-		res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
-	});
+    // [8]
+    res.json(bestMatch);
+
+    console.log(bestMatch);
+
+  });
+
 };

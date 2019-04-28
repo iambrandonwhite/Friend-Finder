@@ -1,35 +1,28 @@
 {
-  "name": "friend-finder",
+  "name": "friendfinder",
   "version": "1.0.0",
-  "description": "A Node.js and Express based friend matching application.",
+  "description": "dating app",
   "main": "server.js",
-  "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.16.4",
-    "materialize-css": "^1.0.0-rc.2",
-    "path": "^0.12.7"
-  },
-  "engines": {
-    "node": "6.9.5"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iambrandonwhite/friend-finder.git"
+    "url": "git+https://github.com/iambrandonwhite/Friend-Finder.git"
   },
   "keywords": [
-    "friend-finder",
-    "friend-match",
-    "compatibility"
+    "friend",
+    "finder"
   ],
   "author": "Brandon White",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/iambrandonwhite/Friend-Finder/issues"
   },
-  "homepage": "https://github.com/iambrandonwhite/Friend-Finder#readme"
+  "homepage": "https://github.com/iambrandonwhite/Friend-Finder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
 }

@@ -1,6 +1,5 @@
 // Data structure that will store the friends data
-module.exports = {
-	array: [
+var friendProfile = [
 	{
 		name: 'Jeff Lebowski',
 		photo: 'https://gq-images.condecdn.net/image/N25V1omb0Qa/crop/405/landscape/f/The-Big-Lebowski-hp-GQ-25Feb16_rex_b.jpg',
@@ -161,5 +160,6 @@ module.exports = {
 			'1'
 		]
 	}
-]
-}
+];
+
+module.exports = friendProfile;
