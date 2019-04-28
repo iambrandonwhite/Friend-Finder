@@ -1,5 +1,5 @@
 // Data structure that will store the friends data
-var friendsArray = [
+var friendProfile = [
 	{
 		name: 'Jeff Lebowski',
 		photo: 'https://gq-images.condecdn.net/image/N25V1omb0Qa/crop/405/landscape/f/The-Big-Lebowski-hp-GQ-25Feb16_rex_b.jpg',
@@ -97,8 +97,8 @@ var friendsArray = [
 		]
 	},
 	{
-		name: 'Beyonce Knowles',
-		photo: 'http://www.billboard.com/files/styles/article_main_image/public/media/beyonce-feb-2014-billboard-650.jpg',
+		name: 'Darth Vader',
+		photo: 'https://cdn.shopify.com/s/files/1/0558/2081/products/Mitchell_DarthVader_FINAL_sm_1024x1024.jpg?v=1493912085',
 		scores: [
 			'5',
 			'4',
@@ -113,8 +113,8 @@ var friendsArray = [
 		]
 	},
 	{
-		name: 'Adele Adkins',
-		photo: 'https://i1.imgiz.com/data/videoshots/6829/6829475-6461.jpg',
+		name: 'Freddy Kruger',
+		photo: 'https://i.pinimg.com/originals/a8/ae/9f/a8ae9f35d66d7d5fdf09611185c7e4da.jpg',
 		scores: [
 			'5',
 			'2',
@@ -129,8 +129,8 @@ var friendsArray = [
 		]
 	},
 	{
-		name: 'Kermit the Frog',
-		photo: 'http://i.dailymail.co.uk/i/pix/2015/09/02/08/2BE5406100000578-3218820-image-m-25_1441179775589.jpg',
+		name: 'Jason',
+		photo: 'https://vignette.wikia.nocookie.net/nightmareonelmstreet/images/6/68/Jason_Voorhees_FvJ.jpg/revision/latest?cb=20171006105801',
 		scores: [
 			'5',
 			'5',
@@ -162,4 +162,4 @@ var friendsArray = [
 	}
 ];
 
-module.exports = friendsArray;
+module.exports = friendProfile;
