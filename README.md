@@ -2,17 +2,7 @@
 
 This full-stack site will take in results from users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
 
-## Preview
-
-### Survey
-
-<a href="http://recordit.co/EZjTnReEdd.gif"><img src="https://media.giphy.com/media/Z9assXod9YOUGja1s5/giphy.gif" border="0"></a>
-
-### Best match result
-
-<a href="http://g.recordit.co/gkgxlbfgNX.gif"><img src="https://media.giphy.com/media/dUfzb2ejNhDt7SYlJF/giphy.gif" border="0"></a>
-
-## Link
+## Demo
 
 https://friendfinder-iambrandonwhite.herokuapp.com/
 
