@@ -1,8 +1,9 @@
 // Data structure that will store the friends data
-var friendsArray = [
+module.exports = {
+	array: [
 	{
-		name: 'Scooter',
-		photo: 'http://cdn3-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-15.jpg',
+		name: 'Jeff Lebowski',
+		photo: 'https://gq-images.condecdn.net/image/N25V1omb0Qa/crop/405/landscape/f/The-Big-Lebowski-hp-GQ-25Feb16_rex_b.jpg',
 		scores: [
 			'1',
 			'5',
@@ -17,8 +18,8 @@ var friendsArray = [
 		]
 	},
 	{
-		name: 'Fluffy',
-		photo: 'https://i.ytimg.com/vi/mRf3-JkwqfU/hqdefault.jpg',
+		name: 'Tony Montana',
+		photo: 'https://i.pinimg.com/originals/f2/c2/3b/f2c23b8e54df9430c581fa4bff8910b5.jpg',
 		scores: [
 			'2',
 			'4',
@@ -33,8 +34,8 @@ var friendsArray = [
 		]
 	},
 	{
-		name: 'Spencer',
-		photo: 'http://cdn3-www.cattime.com/assets/uploads/2011/08/best-kitten-names-1.jpg',
+		name: 'Leatherface',
+		photo: 'https://upload.wikimedia.org/wikipedia/en/0/09/Leatherfaceentertainmentweekly.jpg',
 		scores: [
 			'4',
 			'3',
@@ -49,8 +50,8 @@ var friendsArray = [
 		]
 	},
 	{
-		name: 'Zackariah',
-		photo: 'https://pbs.twimg.com/profile_images/562466745340817408/_nIu8KHX.jpeg',
+		name: 'Hunter S Thompson',
+		photo: 'https://www.thefamouspeople.com/profiles/images/hunter-s-thompson-4.jpg',
 		scores: [
 			'5',
 			'1',
@@ -65,8 +66,8 @@ var friendsArray = [
 		]
 	},
 	{
-		name: 'Cloe',
-		photo: 'http://4.bp.blogspot.com/-HTvSYzA-pO4/UgQb4Zh_u0I/AAAAAAAAEuI/XwhtogT_1tA/s1600/3+cute2.jpg',
+		name: 'Batman',
+		photo: 'https://i.pinimg.com/originals/5d/ba/5d/5dba5dfee1836fc4da067d02bd1a0449.jpg',
 		scores: [
 			'1',
 			'1',
@@ -81,8 +82,8 @@ var friendsArray = [
 		]
 	},
 	{
-		name: 'Mrs. Piggy',
-		photo: 'http://img.mindbodygreen.com/image/upload/c_limit,w_738,f_auto/ftr/Miss-Piggy-large-tonya-312.jpg',
+		name: 'Tom Hanks',
+		photo: 'http://1ryzas42x65e2oosia40bgli.wpengine.netdna-cdn.com/wp-content/uploads/2017/10/2017-10-25-1-1.jpg',
 		scores: [
 			'1',
 			'1',
@@ -145,8 +146,8 @@ var friendsArray = [
 		]
 	},
 	{
-		name: 'Elmo',
-		photo: 'http://1rjm5qg4v8732kpmn44ya6bj-wpengine.netdna-ssl.com/wp-content/uploads/2012/11/elmo-6601.png',
+		name: 'Steve Buschemi',
+		photo: 'https://shawetcanada.files.wordpress.com/2016/06/2226bf7a5aca105cdf0e8c59d6f7190e.jpg?quality=80&strip=all&w=605',
 		scores: [
 			'1',
 			'1',
@@ -160,6 +161,5 @@ var friendsArray = [
 			'1'
 		]
 	}
-];
-
-module.exports = friendsArray;
+]
+}
